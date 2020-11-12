@@ -1,0 +1,38 @@
+
+package fatec.poo.model;
+
+/**
+ *
+ * @author Valquiria Pires
+ */
+public abstract class Pessoa {
+    private String nome;
+    private int anoInscricao;
+    private Double totalCompras; 
+    
+    public Pessoa(String nome, int anoInscricao) {
+        this.nome = nome;
+        this.anoInscricao = anoInscricao;
+    }
+    
+    abstract public double calcBonus(int anoAtual);
+    
+    public void addCompras(double compra){
+        totalCompras += compra;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getAnoInscricao() {
+        return anoInscricao;
+    }
+
+    public Double getTotalCompras() {
+        return totalCompras;
+    }
+
+    
+    
+}
